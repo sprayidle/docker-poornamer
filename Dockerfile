@@ -23,11 +23,14 @@ EXPOSE 8080
 # Configuration
 VOLUME /config
 
-# Source directory
+# Source code directory
 VOLUME /source
 
-# Named directory
-VOLUME /named
+# Unprocessed directory
+VOLUME /unprocessed
+
+# Processed directory
+VOLUME /processed
 
 # Add setup script
 RUN mkdir -p /etc/my_init.d
