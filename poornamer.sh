@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec /sbin/setuser nobody python /opt/poornamer/poornamer.py -settingspath /config
+exec /sbin/setuser nobody python /source/poornamer.py -settingspath /config
