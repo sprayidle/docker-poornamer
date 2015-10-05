@@ -12,10 +12,18 @@ RUN \
 usermod -u 99 nobody && \
 usermod -g 100 nobody && \
 usermod -d /home nobody && \
-chown -R nobody:users /home
+chown -R nobody:users /home && \
 
 # Disable SSH
-RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
+rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh && \
+
+add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe multiverse" && \
+add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates universe multiverse" && \
+add-apt-repository ppa:mc3man/trusty-media && \
+apt-get update -q && \
+
+# Install Dependencies
+apt-get install -qy python wget ffmpeg && \
 
 # Expose the web interface
 EXPOSE 8080
