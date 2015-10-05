@@ -23,7 +23,7 @@ add-apt-repository ppa:mc3man/trusty-media && \
 apt-get update -q && \
 
 # Install Dependencies
-apt-get install -qy python wget ffmpeg &&
+apt-get install -qy python wget ffmpeg 
 
 # Expose the web interface
 EXPOSE 8080
