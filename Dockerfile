@@ -26,8 +26,6 @@ apt-get update -q && \
 # Install Dependencies
 apt-get install -qy python wget ffmpeg 
 
-RUN python /source/setup.py install
-
 # Expose the web interface
 EXPOSE 8080
 
