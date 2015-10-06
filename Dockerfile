@@ -26,6 +26,12 @@ apt-get update -q && \
 # Install Dependencies
 apt-get install -qy python wget ffmpeg 
 
+RUN \
+cd /tmp && \
+wget -O get-pip.py https://bootstrap.pypa.io/get-pip.py && \
+python get-pip.py \
+python /source/setup.py install
+
 # Expose the web interface
 EXPOSE 8080
 
