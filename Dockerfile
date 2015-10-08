@@ -29,7 +29,7 @@ apt-get install -qy python wget ffmpeg
 RUN cd /tmp
 RUN wget -O get-pip.py https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
-RUN python /source/setup.py install
+RUN ["python", "/source/setup.py", "install"]
 
 # Expose the web interface
 EXPOSE 8080
