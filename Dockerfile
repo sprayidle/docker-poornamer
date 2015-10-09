@@ -26,11 +26,11 @@ apt-get update -q && \
 # Install Dependencies
 apt-get install -qy python wget ffmpeg 
 
-RUN cd /tmp
-RUN wget -O get-pip.py https://bootstrap.pypa.io/get-pip.py
-RUN python get-pip.py
-RUN cd /source
-RUN ["python", "setup.py", "install"]
+RUN \
+cd /tmp && \
+wget -O get-pip.py https://bootstrap.pypa.io/get-pip.py && \
+python get-pip.py && \
+pip install virtualenvwrapper
 
 # Expose the web interface
 EXPOSE 8080
