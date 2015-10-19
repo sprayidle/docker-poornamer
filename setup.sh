@@ -1,4 +1,4 @@
 #!/bin/bash
 
-python /source/config.py install
+python /source/setup.py install
 
