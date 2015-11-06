@@ -63,3 +63,4 @@ RUN chmod +x /etc/service/poornamer/run
 RUN mkdir /etc/service/celery
 ADD celery.sh /etc/service/celery/run
 RUN chmod +x /etc/service/celery/run
+
