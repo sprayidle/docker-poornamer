@@ -58,3 +58,8 @@ RUN chmod +x /etc/my_init.d/setup.sh
 RUN mkdir /etc/service/poornamer
 ADD poornamer.sh /etc/service/poornamer/run
 RUN chmod +x /etc/service/poornamer/run
+
+# Add celery worker to runit
+RUN mkdir /etc/service/celery
+ADD celery.sh /etc/service/celery/run
+RUN chmod +x /etc/service/celery/run

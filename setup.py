@@ -9,5 +9,6 @@ setup(name='Poornamer',
       install_requires=['Flask==0.10.1',
 						'Flask-SQLAlchemy==2.0',
 						'celery==3.1.19',
+						'redis==2.10.5',
 						],
      )
